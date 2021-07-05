@@ -1,51 +1,48 @@
 function getComputerPick()
 {
-    var randomPick = Math.round(Math.random() * 2);
+    let randomPick = Math.round(Math.random() * 2);
     switch(randomPick)
     {
         case 0:
             return "Rock";
-            break;
         case 1:
             return "Paper";
-            break;
         case 2:
             return "Scissors";
-            break;
     }
 }
 function game(playerPick)
 {
-    var computerPick = getComputerPick();
+    let computerPick = getComputerPick();
     console.log("Player pick is "+playerPick);
     console.log("Computer pick is "+computerPick);
-    if(playerPick ==computerPick)
+    if(playerPick ===computerPick)
     {
         console.log("Tie! Roll again");
-    } 
-    else if (playerPick == "Rock" && computerPick == "Scissors")
+    }
+    else if (playerPick === "Rock" && computerPick === "Scissors")
     {
         console.log("Player wins! Rocks beats Scissors");
-    } 
-    else if (playerPick == "Paper" && computerPick == "Rock")
+    }
+    else if (playerPick === "Paper" && computerPick === "Rock")
     {
         console.log("Player wins! Paper beats Rock");
-    } 
-    else if (playerPick == "Scissors" && computerPick == "Paper")
+    }
+    else if (playerPick === "Scissors" && computerPick === "Paper")
     {
         console.log("Player wins! Scissors beats Paper");
-    } 
-    else if (playerPick == "Scissors" && computerPick == "Rock")
+    }
+    else if (playerPick === "Scissors" && computerPick === "Rock")
     {
         console.log("Computer wins! Rocks beats Scissors");
-    } 
-    else if (playerPick == "Rock" && computerPick == "Paper")
+    }
+    else if (playerPick === "Rock" && computerPick === "Paper")
     {
         console.log("Computer wins! Paper beats Rock");
-    } 
-    else if (playerPick == "Paper" && computerPick == "Scissors")
+    }
+    else if (playerPick === "Paper" && computerPick === "Scissors")
     {
         console.log("Computer wins! Scissors beats Paper");
-    } 
+    }
 
 }
